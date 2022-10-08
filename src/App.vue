@@ -1,28 +1,32 @@
 <template>
   <div id="app">
     <the-header class="border-underline"/>
+    <the-access-status class="border-underline"/>
     <router-view class="content"/>
     <notifications position="top right"/>
   </div>
 </template>
 
 <script>
-  import TheHeader from './components/TheHeader';
+  import TheHeader from '@/components/TheHeader';
+  import TheAccessStatus from '@/components/access/TheAccessStatus';
+
   export default {
     name: 'App',
     components: {
       TheHeader,
+      TheAccessStatus,
     },
     watch: {
       '$route.path': {
         handler() {
           const routeParts = this.$route.path.split('/');
-          const instance = routeParts[1];
-          this.$store.commit('setInstance', instance);
+          const controlArea = routeParts[1];
+          this.$store.commit('setControlArea', controlArea);
         },
       },
     },
-  }
+  };
 </script>
 
 <style lang="scss">
@@ -33,20 +37,10 @@
     text-align: center;
     color: $text-color;
     background-image: url("./assets/clouds.jpg");
-    margin: 0;
     background-color: $background-color;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
-
-  html {
-    background-color: $background-color;
-    height: 100vh;
-    width: 97vw;
-    margin: 0 auto;
-    padding: 0;
-    overflow-x: hidden;
   }
 
   .border-underline {
@@ -56,7 +50,8 @@
   }
 
   .content {
+    margin-right: 1rem;
+    margin-left: 1rem;
     flex-grow: 1;
   }
-
 </style>

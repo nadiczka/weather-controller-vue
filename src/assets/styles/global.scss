@@ -1,0 +1,38 @@
+@mixin text-color {
+  color: $text-color;
+}
+
+@mixin text-size {
+  font-size: max(1rem, 1vw);
+}
+
+@mixin text-size-important {
+  font-size: max(1rem, 1vw) !important;
+}
+
+.full-button {
+  background-color: $base-button-color;
+  color: $base-button-font-color;
+  border: white;
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+
+.base-button {
+  @include text-size;
+  background-color: $base-button-color;
+  color: $base-button-font-color;
+  border: white;
+}
+
+h1, h2, h3, h4, h5,
+label,
+p,
+.nav-link {
+  @include text-color;
+  @include text-size;
+}
+
+input, select {
+  @include text-size-important;
+}
