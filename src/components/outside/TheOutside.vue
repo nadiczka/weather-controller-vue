@@ -13,18 +13,24 @@
       <the-temperature-tab/>
     </b-tab>
 
+    <b-tab title="Water level">
+      <the-water-level-tab/>
+    </b-tab>
+
   </b-tabs>
 </template>
 
 <script>
   import ThePressureTab from '@/components/ThePressureTab';
   import TheTemperatureTab from '@/components/TheTemperatureTab';
+  import TheWaterLevelTab from '@/components/outside/TheWaterLevelTab';
 
   export default {
     name: 'TheOutside',
     components: {
       ThePressureTab,
       TheTemperatureTab,
+      TheWaterLevelTab,
     },
     data() {
       return {

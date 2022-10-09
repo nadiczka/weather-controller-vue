@@ -12,6 +12,11 @@ export const outside = {
       TemperatureTerrace: [],
       TemperatureSwimmingPool: [],
     },
+    waterLevel: {
+      SwimmingPool: [],
+      Rain: [],
+      Barrel: [],
+    },
     processChart: {
       AverageTemperature: [],
       AveragePressure: [],
