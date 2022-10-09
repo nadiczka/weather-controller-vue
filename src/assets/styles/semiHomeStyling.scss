@@ -1,0 +1,59 @@
+//Styles for tabs
+
+$breakpoint: 3000px;
+
+::v-deep .nav-link:hover {
+  color: $base-button-font-color;
+}
+
+::v-deep .nav-link:focus {
+  color: black;
+}
+
+::v-deep .nav-link,
+.nav-link:hover,
+.nav-link:focus {
+  font-size: max(1rem, 1vw);
+}
+
+::v-deep .nav-pills .nav-link.active,
+.nav-pills.show > .nav-link {
+  background-color: $base-button-color !important;
+}
+
+.home-tabs {
+  @media screen and (max-width: $breakpoint) {
+    display: block;
+  }
+}
+
+::v-deep .nav-item {
+  line-height: 5vh;
+  flex-grow: 0;
+  @media screen and (max-width: $breakpoint) {
+    min-width: 20%;
+    flex-grow: 1;
+  }
+}
+
+::v-deep .flex-column {
+  background-color: transparent;
+  @media screen and (max-width: $breakpoint) {
+    max-width: unset;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+}
+
+::v-deep .col-auto {
+  @media screen and (max-width: $breakpoint) {
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+::v-deep .card-header {
+  background-color: transparent;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

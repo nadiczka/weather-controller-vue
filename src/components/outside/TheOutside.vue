@@ -5,14 +5,19 @@
           class="home-tabs"
           pills>
 
+    <b-tab active title="Pressure">
+      <the-pressure-tab/>
+    </b-tab>
   </b-tabs>
 </template>
 
 <script>
+  import ThePressureTab from '@/components/ThePressureTab';
+
   export default {
     name: 'TheOutside',
     components: {
-
+      ThePressureTab,
     },
     data() {
       return {
