@@ -12,7 +12,7 @@
   MomentTimeZone();
 
   export default {
-    name: 'BaseHighChart',
+    name: 'BaseUpdatingChart',
     data() {
       return {
         mainColor: 'rgb(1, 133, 190)',

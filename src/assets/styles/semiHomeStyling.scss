@@ -7,7 +7,7 @@ $breakpoint: 3000px;
 }
 
 ::v-deep .nav-link:focus {
-  color: black;
+  color: $text-color;
 }
 
 ::v-deep .nav-link,

@@ -8,9 +8,9 @@ export const outside = {
       PressureSwimmingPool: [],
     },
     temperature: {
-      PressureBalcony: [],
-      PressureTerrace: [],
-      PressureSwimmingPool: [],
+      TemperatureBalcony: [],
+      TemperatureTerrace: [],
+      TemperatureSwimmingPool: [],
     },
     processChart: {
       AverageTemperature: [],

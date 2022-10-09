@@ -8,16 +8,23 @@
     <b-tab active title="Pressure">
       <the-pressure-tab/>
     </b-tab>
+
+    <b-tab title="Temperature">
+      <the-temperature-tab/>
+    </b-tab>
+
   </b-tabs>
 </template>
 
 <script>
   import ThePressureTab from '@/components/ThePressureTab';
+  import TheTemperatureTab from '@/components/TheTemperatureTab';
 
   export default {
     name: 'TheOutside',
     components: {
       ThePressureTab,
+      TheTemperatureTab,
     },
     data() {
       return {
