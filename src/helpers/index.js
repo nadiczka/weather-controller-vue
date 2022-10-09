@@ -27,17 +27,17 @@ const constructSignalsData = (mainParam, labels, prepend, append) => {
   return data;
 }
 
-const getStoreValue = (instance, attributeName) => {
-  return store.state[instance][attributeName];
+const getStoreValue = (controlArea, attributeName) => {
+  return store.state[controlArea][attributeName];
 }
 
-const addSinglePointToStoreAttribute = (instance, attributeName, attributePartName, point) => {
+const addSinglePointToStoreAttribute = (controlArea, attributeName, attributePartName, point) => {
   const commitData = {
     attributeName: attributeName,
     attributePartName: attributePartName,
     value: point,
   }
-  store.commit(`${instance}/addToAttribute`, commitData);
+  store.commit(`${controlArea}/addToAttribute`, commitData);
 }
 
 const getRandomValue = () => {
@@ -46,12 +46,12 @@ const getRandomValue = () => {
   return Math.round(Math.random() * sign * 1000);
 }
 
-const addPointsToStoreAttribute = (instance, attributeName, labels) => {
+const addPointsToStoreAttribute = (controlArea, attributeName, labels) => {
   const currentTime = new Date().getTime();
   for(let i=0; i<labels.length; i+=1) {
     const value = getRandomValue();
     const point = [currentTime, value];
-    addSinglePointToStoreAttribute(instance, attributeName, labels[i], point);
+    addSinglePointToStoreAttribute(controlArea, attributeName, labels[i], point);
   }
 }
 

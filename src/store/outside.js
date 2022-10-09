@@ -7,6 +7,18 @@ export const outside = {
       PressureTerrace: [],
       PressureSwimmingPool: [],
     },
+    temperature: {
+      PressureBalcony: [],
+      PressureTerrace: [],
+      PressureSwimmingPool: [],
+    },
+    processChart: {
+      AverageTemperature: [],
+      AveragePressure: [],
+      SetpointTemperature: [],
+    },
+    configChartData: [{}],
+    configData: [{}],
   },
   mutations: {
     setSelectedTab(state, selectedTab) {
@@ -18,11 +30,34 @@ export const outside = {
       }
       state[attributeName][attributePartName].push(value);
     },
+    setWholeConfigChartData(state, chartData) {
+      state.configChartData = chartData;
+    },
+    setConfigData(state, { configDataIndex, data }) {
+      state.configData[configDataIndex] = data;
+    },
+    setWholeConfigData(state, data) {
+      state.configData = data;
+    },
+    clearWholeConfigData(state) {
+      state.configData = [{}, {}];
+    },
   },
   actions: {
 
   },
   getters: {
-
+    getLastPointsValues: (state) => (attributeName) => {
+      let lastPoints = {};
+      if (state[attributeName]) {
+        Object.entries(state[attributeName]).forEach(([key, val]) => {
+          lastPoints[key] = val[val.length-1];
+        })
+      }
+      return lastPoints;
+    },
+    getConfigData: (state) => {
+      return {'outside': state.configData[0].segmentsConfig};
+    }
   },
 };

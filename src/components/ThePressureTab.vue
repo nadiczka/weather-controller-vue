@@ -6,6 +6,13 @@
           <base-paragraphs-with-backgrounds v-model="signalsData.series"/>
         </b-col>
       </b-row>
+      <b-row class="mt-4">
+        <b-col>
+          <updating-chart :signals-data="signalsData"
+                          :attribute-name="attributeName"
+                          :chart-height="chartHeight"/>
+        </b-col>
+      </b-row>
     </template>
   </base-tab-container>
 </template>
@@ -34,6 +41,9 @@
     },
     computed: {
       ...mapState(['controlArea']),
+      chartHeight() {
+        return`${window.innerHeight*0.4}px`
+      },
       pressure() {
         return getStoreValue(this.controlArea,this.attributeName);
       },
