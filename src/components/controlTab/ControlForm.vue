@@ -6,7 +6,7 @@
       </b-col>
     </b-row>
 
-    <control-upload-file-button :controlArea="controlArea"/>
+    <control-upload-file-button :control-area="controlArea"/>
 
     <b-row>
       <b-col>
@@ -42,6 +42,8 @@
 
     <b-row>
       <b-col>
+        <control-save-file-button :control-area="controlArea"/>
+
         <base-full-button btn-text="Update chart"
                           @click="updateChart"/>
 
@@ -58,6 +60,7 @@
   import TextAndSelectField from '@/components/controlTab/textAndField/TextAndSelectField';
   import ControlSegmentParamsForm from '@/components/controlTab/ControlSegmentParamsForm';
   import ControlUploadFileButton from '@/components/controlTab/ControlUploadFileButton';
+  import ControlSaveFileButton from '@/components/controlTab/ControlSaveFileButton';
   import BaseFullButton from '@/components/base/BaseFullButton';
   import { jsonCopy } from '@/helpers';
   import { mapState } from "vuex";
@@ -67,6 +70,7 @@
     components: {
       ControlSegmentParamsForm,
       ControlUploadFileButton,
+      ControlSaveFileButton,
       TextAndInputField,
       TextAndSelectField,
       BaseFullButton,
