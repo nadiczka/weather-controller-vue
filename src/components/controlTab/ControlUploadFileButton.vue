@@ -1,10 +1,9 @@
 <template>
   <div>
     <base-full-button v-b-modal.BaseInputModalUpload
-                      class="info-button"
                       variant="info"
                       customStyle="background-color: lightblue"
-                      btn-text="UPLOAD CONFIG FILE"/>
+                      btn-text="Upload configuration from txt file"/>
 
     <base-input-modal id="BaseInputModalUpload"
                       ref="BaseInputModalUpload"
@@ -80,15 +79,6 @@
         };
         reader.readAsText(this.uploadedConfigFile)
       },
-      listOfBinToIndex(list) {
-        const listIndex = [];
-        list.forEach((el, idx) => {
-          if (el) {
-            listIndex.push(idx+1);
-          }
-        });
-        return listIndex;
-      },
       segmentsConfigFromArrayToObject(configList) {
         const segmentsConfigObject = {};
         configList.forEach((segment, idx) => {
@@ -100,8 +90,6 @@
         const listOfConfig = jsonCopy(this.uploadedConfigInJson.config);
         listOfConfig.map((el) => {
           el.segmentsConfig = this.segmentsConfigFromArrayToObject(el.segmentsConfig);
-          el.outputChannels = this.listOfBinToIndex(el.outputChannels);
-          el.inputAnalogChannels =  this.listOfBinToIndex(el.inputAnalogChannels);
         })
         return listOfConfig;
       },
