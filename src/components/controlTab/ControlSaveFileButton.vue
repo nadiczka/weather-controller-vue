@@ -65,18 +65,11 @@
       },
       exportConfigToJSON(listOfData, controlArea) {
         const configList = [];
-        listOfData.forEach((data, index) => {
+        listOfData.forEach((data) => {
           let dataCopy = jsonCopy(data);
           let configStruct = {
             ...dataCopy,
             segmentsConfig: this.segmentsConfigFromObjectToArray(dataCopy.segmentsConfig),
-          }
-          if (this.controlArea === 'UVC') {
-            let strips = 'NEG';
-            if (index === 1) {
-              strips = 'NO-NEG'
-            }
-            configStruct = { ...configStruct, strips: strips }
           }
           configList.push(configStruct)
         })
