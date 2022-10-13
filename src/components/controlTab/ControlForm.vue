@@ -6,6 +6,14 @@
       </b-col>
     </b-row>
 
+    <control-upload-file-button :controlArea="controlArea"/>
+
+    <b-row>
+      <b-col>
+        <p>or</p>
+      </b-col>
+    </b-row>
+
     <b-row>
       <b-col>
         <text-and-input-field v-model="wholeConfigParams.numberOfSegments"
@@ -49,6 +57,7 @@
   import TextAndInputField from '@/components/controlTab/textAndField/TextAndInputField';
   import TextAndSelectField from '@/components/controlTab/textAndField/TextAndSelectField';
   import ControlSegmentParamsForm from '@/components/controlTab/ControlSegmentParamsForm';
+  import ControlUploadFileButton from '@/components/controlTab/ControlUploadFileButton';
   import BaseFullButton from '@/components/base/BaseFullButton';
   import { jsonCopy } from '@/helpers';
   import { mapState } from "vuex";
@@ -57,6 +66,7 @@
     name: 'ControlForm',
     components: {
       ControlSegmentParamsForm,
+      ControlUploadFileButton,
       TextAndInputField,
       TextAndSelectField,
       BaseFullButton,

@@ -1,7 +1,8 @@
 <template>
   <b-row>
     <b-col>
-      <b-button :variant="variant"
+      <b-button :style="customStyle"
+                :variant="variant"
                 class="full-button"
                 @click="$emit('click')"
                 v-text="btnText"/>
@@ -18,6 +19,10 @@
         require: true,
       },
       variant: {
+        type: String,
+        default: 'warning',
+      },
+      customStyle: {
         type: String,
         default: 'warning',
       },
