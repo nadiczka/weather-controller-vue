@@ -1,8 +1,7 @@
 <template>
   <base-tab-container title="Inside">
     <template v-slot:tab-body>
-      <control-form main-unit="A"
-                   :number-of-output-channels="2"/>
+      <control-form/>
 
       <b-row>
         <b-col>

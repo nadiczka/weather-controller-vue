@@ -36,6 +36,7 @@
         <control-segment-params-form :key="clearSegmentsParamsKey"
                                      v-model="wholeConfigParams.segmentsConfig"
                                      :current-segment-number="currentSegmentNumber"
+                                     :main-unit="mainUnit"
                                      :number-of-segments="wholeConfigParams.numberOfSegments"/>
       </b-col>
     </b-row>
@@ -63,7 +64,7 @@
   import ControlSaveFileButton from '@/components/controlTab/ControlSaveFileButton';
   import BaseFullButton from '@/components/base/BaseFullButton';
   import { jsonCopy } from '@/helpers';
-  import { mapState } from "vuex";
+  import { mapState } from 'vuex';
 
   export default {
     name: 'ControlForm',
@@ -80,10 +81,13 @@
         type: Number,
         default: 0,
       },
+      mainUnit: {
+        type: String,
+        default: `\u00B0C`,
+      },
     },
     data() {
       return {
-        degreeSymbol: '\u00B0',
         unit: 'min',
         currentSegmentNumber: '',
         emptyConfigParams: {
@@ -111,11 +115,11 @@
           if (curVal !== this.wholeConfigParams) {
             this.wholeConfigParams = curVal;
           }
-        }
+        },
       },
       'wholeConfigParams.numberOfSegments': {
         handler(curVal) {
-          if(curVal !== '') {
+          if (curVal !== '') {
             this.currentSegmentNumber = '1';
           } else {
             this.currentSegmentNumber = '';
@@ -126,7 +130,7 @@
     computed: {
       ...mapState(['controlArea']),
       configDataObject() {
-        if(this.controlArea) {
+        if (this.controlArea) {
           return this.$store.state[this.controlArea].configData[this.configDataIndex];
         }
         return {};
@@ -160,7 +164,7 @@
           timeUnit: this.unit,
           mainUnit: this.mainUnit,
         };
-        this.$store.commit(`${this.controlArea}/setWholeConfigChartData`, chartData)
+        this.$store.commit(`${this.controlArea}/setWholeConfigChartData`, chartData);
       },
     },
     created() {

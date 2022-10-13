@@ -1,10 +1,10 @@
 <template>
   <div>
     <text-and-input-field v-model="currentSegmentParams.startValue"
-                          :text="`Start Temp [min]`"/>
+                          :text="`Start Temp [${mainUnit}]`"/>
 
     <text-and-input-field v-model="currentSegmentParams.stopValue"
-                          :text="`Stop Temp [min]`"/>
+                          :text="`Stop Temp [${mainUnit}]`"/>
 
     <text-and-input-field v-model="currentSegmentParams.segmentTimeMin"
                           :text="`Segment Time [min]`"/>
@@ -31,6 +31,10 @@
       },
       numberOfSegments: {
         type: [String, Number],
+        require: true,
+      },
+      mainUnit: {
+        type: String,
         require: true,
       },
     },
