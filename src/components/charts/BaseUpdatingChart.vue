@@ -58,7 +58,7 @@
         const getAttributesValues = () => { return this.attributesValues };
         this.chart = Highcharts.stockChart(this.$el, {
           chart: {
-            backgroundColor: 'lavender',
+            backgroundColor: 'white',
             height: this.chartHeight,
           },
           time: {

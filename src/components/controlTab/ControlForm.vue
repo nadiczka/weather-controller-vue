@@ -22,7 +22,7 @@
     <b-row class="border-div">
       <b-col>
         <text-and-select-field v-model="currentSegmentNumber"
-                               :options="nnumberOfSegmentsOptions"
+                               :options="numberOfSegmentsOptions"
                                text="Choose segment"/>
 
         <control-segment-params-form :key="clearSegmentsParamsKey"
