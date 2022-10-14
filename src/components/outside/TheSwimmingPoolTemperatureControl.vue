@@ -1,5 +1,5 @@
 <template>
-  <base-tab-container title="Inside">
+  <base-tab-container class="control-tab">
     <template v-slot:tab-body>
       <control-form/>
 
@@ -30,5 +30,8 @@
 </script>
 
 <style scoped>
-
+  .control-tab {
+    padding: 2rem;
+    background-color: rgba(78, 84, 50, 0.3);
+  }
 </style>

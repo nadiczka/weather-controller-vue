@@ -5,8 +5,13 @@
         <h3 class="left-base-color-text mt-2">Ramp simulation</h3>
       </b-col>
     </b-row>
-    <base-static-chart :chart-data="finalChartData"
-                       class="mt-2"/>
+    <b-row class="border-div">
+      <b-col>
+        <base-static-chart :chart-data="finalChartData"
+                           class="mt-2"/>
+      </b-col>
+    </b-row>
+
   </div>
 </template>
 
@@ -92,5 +97,12 @@
   .left-base-color-text {
     color: $base-button-color;
     justify-content: flex-start;
+  }
+
+  .border-div {
+    border: 4px solid $base-button-color;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 </style>

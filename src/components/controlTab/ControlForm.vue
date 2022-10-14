@@ -45,7 +45,7 @@
       <b-col>
         <control-save-file-button :control-area="controlArea"/>
 
-        <base-full-button btn-text="Update chart"
+        <base-full-button btn-text="Create chart"
                           @click="updateChart"/>
 
         <base-full-button btn-text="Clear configuration"
@@ -175,7 +175,6 @@
 
 <style lang="scss" scoped>
   .border-div {
-    background-color: rgba(78, 84, 50, 0.2);
     border: 4px solid $base-button-color;
     padding-top: 1rem;
     padding-bottom: 1rem;
