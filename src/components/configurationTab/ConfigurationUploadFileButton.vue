@@ -29,7 +29,7 @@
   import {jsonCopy} from "@/helpers";
 
   export default {
-    name: "ControlUploadFileButton",
+    name: "ConfigurationUploadFileButton",
     data() {
       return {
         uploadedConfigFile: null,

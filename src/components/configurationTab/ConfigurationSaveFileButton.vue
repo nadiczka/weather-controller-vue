@@ -27,7 +27,7 @@
   import BaseInputModal from '@/components/base/BaseInputModal'
 
   export default {
-    name: 'ControlSaveFileButton.vue',
+    name: 'ConfigurationSaveFileButton.vue',
     props: {
       controlArea: {
         type: String,

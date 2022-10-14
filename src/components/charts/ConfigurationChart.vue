@@ -20,7 +20,7 @@
   import { mapState } from 'vuex';
 
   export default {
-    name: 'ControlChart',
+    name: 'ConfigurationChart',
     data() {
       return {
         refresh: false,

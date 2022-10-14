@@ -6,7 +6,7 @@
       </b-col>
     </b-row>
 
-    <control-upload-file-button :control-area="controlArea"/>
+    <configuration-upload-file-button :control-area="controlArea"/>
 
     <b-row>
       <b-col>
@@ -33,8 +33,8 @@
                                :options="numberOfSegmentsOptions"
                                text="Choose segment"/>
 
-        <control-segment-params-form :key="clearSegmentsParamsKey"
-                                     v-model="wholeConfigParams.segmentsConfig"
+        <configuration-segment-params-form :key="clearSegmentsParamsKey"
+                                           v-model="wholeConfigParams.segmentsConfig"
                                      :current-segment-number="currentSegmentNumber"
                                      :main-unit="mainUnit"
                                      :number-of-segments="wholeConfigParams.numberOfSegments"/>
@@ -43,7 +43,7 @@
 
     <b-row>
       <b-col>
-        <control-save-file-button :control-area="controlArea"/>
+        <configuration-save-file-button :control-area="controlArea"/>
 
         <base-full-button btn-text="Create chart"
                           @click="updateChart"/>
@@ -57,21 +57,21 @@
 </template>
 
 <script>
-  import TextAndInputField from '@/components/controlTab/textAndField/TextAndInputField';
-  import TextAndSelectField from '@/components/controlTab/textAndField/TextAndSelectField';
-  import ControlSegmentParamsForm from '@/components/controlTab/ControlSegmentParamsForm';
-  import ControlUploadFileButton from '@/components/controlTab/ControlUploadFileButton';
-  import ControlSaveFileButton from '@/components/controlTab/ControlSaveFileButton';
+  import TextAndInputField from '@/components/configurationTab/textAndField/TextAndInputField';
+  import TextAndSelectField from '@/components/configurationTab/textAndField/TextAndSelectField';
+  import ConfigurationSegmentParamsForm from '@/components/configurationTab/ConfigurationSegmentParamsForm';
+  import ConfigurationUploadFileButton from '@/components/configurationTab/ConfigurationUploadFileButton';
+  import ConfigurationSaveFileButton from '@/components/configurationTab/ConfigurationSaveFileButton';
   import BaseFullButton from '@/components/base/BaseFullButton';
   import { jsonCopy } from '@/helpers';
   import { mapState } from 'vuex';
 
   export default {
-    name: 'ControlForm',
+    name: 'ConfigurationForm',
     components: {
-      ControlSegmentParamsForm,
-      ControlUploadFileButton,
-      ControlSaveFileButton,
+      ConfigurationSegmentParamsForm,
+      ConfigurationUploadFileButton,
+      ConfigurationSaveFileButton,
       TextAndInputField,
       TextAndSelectField,
       BaseFullButton,

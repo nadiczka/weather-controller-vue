@@ -15,11 +15,11 @@
 </template>
 
 <script>
-  import TextAndInputField from "@/components/controlTab/textAndField/TextAndInputField";
+  import TextAndInputField from "@/components/configurationTab/textAndField/TextAndInputField";
   import {jsonCopy} from "@/helpers";
 
   export default {
-    name: "ControlSegmentParamsForm",
+    name: "ConfigurationSegmentParamsForm",
     props: {
       value: {
         type: Object,

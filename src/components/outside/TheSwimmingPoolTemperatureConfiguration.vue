@@ -1,11 +1,11 @@
 <template>
-  <base-tab-container class="control-tab">
+  <base-tab-container class="configuration-tab">
     <template v-slot:tab-body>
-      <control-form/>
+      <configuration-form/>
 
       <b-row>
         <b-col>
-          <control-chart/>
+          <configuration-chart/>
         </b-col>
       </b-row>
     </template>
@@ -15,22 +15,22 @@
 <script>
   import BaseTabContainer from "@/components/base/BaseTabContainer";
   import BaseParagraphsWithBackgrounds from "@/components/base/BaseParagraphsWithBackgrounds";
-  import ControlChart from "@/components/charts/ControlChart";
-  import ControlForm from "@/components/controlTab/ControlForm";
+  import ConfigurationChart from "@/components/charts/ConfigurationChart";
+  import ConfigurationForm from "@/components/configurationTab/ConfigurationForm";
 
   export default {
-    name: 'TheSwimmingPoolTemperatureControl',
+    name: 'TheSwimmingPoolTemperatureConfiguration',
     components: {
       BaseTabContainer,
       BaseParagraphsWithBackgrounds,
-      ControlChart,
-      ControlForm,
+      ConfigurationChart,
+      ConfigurationForm,
     },
   };
 </script>
 
 <style scoped>
-  .control-tab {
+  .configuration-tab {
     padding: 2rem;
     background-color: rgba(78, 84, 50, 0.3);
   }
