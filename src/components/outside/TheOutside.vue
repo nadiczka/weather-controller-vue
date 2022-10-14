@@ -13,18 +13,24 @@
       <the-temperature-tab/>
     </b-tab>
 
+    <b-tab title="Swimming pool temperature configuration">
+      <the-swimming-pool-temperature-configuration/>
+    </b-tab>
+
   </b-tabs>
 </template>
 
 <script>
   import ThePressureTab from '@/components/ThePressureTab';
   import TheTemperatureTab from '@/components/TheTemperatureTab';
+  import TheSwimmingPoolTemperatureConfiguration from '@/components/outside/TheSwimmingPoolTemperatureConfiguration';
 
   export default {
     name: 'TheOutside',
     components: {
       ThePressureTab,
       TheTemperatureTab,
+      TheSwimmingPoolTemperatureConfiguration,
     },
     data() {
       return {

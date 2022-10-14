@@ -18,7 +18,6 @@
 
 <style scoped lang="scss">
   .tab-container {
-    padding-top: 1rem;
     margin-left: 0;
     margin-right: 0;
     width: 100%;

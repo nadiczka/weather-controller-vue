@@ -13,6 +13,8 @@ $breakpoint: 3000px;
 ::v-deep .nav-link,
 .nav-link:hover,
 .nav-link:focus {
+  margin: 5px;
+  background-color: rgba(198, 227, 221, 0.2);
   font-size: max(1rem, 1vw);
 }
 
@@ -47,6 +49,7 @@ $breakpoint: 3000px;
 }
 
 ::v-deep .col-auto {
+  margin-bottom: 1rem;
   @media screen and (max-width: $breakpoint) {
     flex-grow: 1;
     max-width: 100%;
@@ -56,4 +59,8 @@ $breakpoint: 3000px;
   background-color: transparent;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+::v-deep .card-body {
+  background-color: rgba(198, 227, 221, 0.2);
 }

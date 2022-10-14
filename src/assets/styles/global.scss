@@ -25,10 +25,11 @@
   border: white;
 }
 
-h1, h2, h3, h4, h5,
-label,
-p,
-.nav-link {
+h1, h2, h3, h4, h5 {
+  @include text-color;
+}
+
+label, p, .nav-link {
   @include text-color;
   @include text-size;
 }
