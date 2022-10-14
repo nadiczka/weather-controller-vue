@@ -125,11 +125,14 @@
       },
       handleStartAndStopTemps() {
         const {startValue, stopValue} = this.currentSegmentParams;
-        if (startValue && this.segmentsConfig[this.currentSegmentNumber - 1]) {
-          this.segmentsConfig[this.currentSegmentNumber - 1].stopValue = startValue;
+
+        const previousSegment = this.segmentsConfig[Number(this.currentSegmentNumber) - 1]
+        if (startValue && previousSegment) {
+          previousSegment.stopValue = startValue;
         }
-        if (stopValue && this.segmentsConfig[this.currentSegmentNumber + 1]) {
-          this.segmentsConfig[this.currentSegmentNumber + 1].startValue = stopValue;
+        const nextSegment = this.segmentsConfig[Number(this.currentSegmentNumber) + 1]
+        if (stopValue && nextSegment) {
+          nextSegment.startValue = stopValue;
         }
       },
     },

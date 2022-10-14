@@ -165,7 +165,6 @@
   };
 </script>
 
-
 <style scoped>
   .highchart {
     display: flex;
