@@ -175,6 +175,7 @@
 
 <style lang="scss" scoped>
   .border-div {
+    background-color: rgba(78, 84, 50, 0.2);
     border: 4px solid $base-button-color;
     padding-top: 1rem;
     padding-bottom: 1rem;
