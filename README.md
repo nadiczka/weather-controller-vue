@@ -13,6 +13,25 @@
 - Notification Vue
 - Sass
 
+## What it has been created for?
+
+It has been created as an anonimisation of my engineer thesis. 
+That's why some functionalities like heating swimmingpool by temperature ramp can look crazy.
+
+## How to run the app?
+
+1. At first install Node.js and add it to your environmental variables.
+2. Then in project directory run 'npm install'.
+3. After packages instalation run in the same terminal 'npm run serve'.
+
+Now the app should be running on your localhost. 
+4. Open localhost in your browser on the port indicated in terminal (probably it is 8080).
+
+## Description
+
+-Will be added in the future-
+
+
 ## Is the project finished?
 
 No, it isn't. 
@@ -23,14 +42,6 @@ At the moment there has been implemented:
 - tabs to observe the values of the temperature and pressure outside (simulated with random data).
 - tab to configure temperature ramp.
 
-Still whole inside area has to be created and also the ramp control tab and some another tabs like toget the rain data.
-
-## What it has been created for?
-
-It has been created as an anonimisation of my engineer thesis. 
-That's why some functionalities like heating swimmingpool by temperature ramp can look crazy.
-
-## Description
-
+Still whole inside area, the ramp control tab and some another tabs has to be created.
 
 
