@@ -2,6 +2,17 @@
 
 ### The project simulates the controller of the weather and home conditions
 
+## What technologies has been used?
+
+- Vue.js - version 2
+- Bootstrap Vue
+- Highcharts
+- Vuex
+- Router Vue
+- Moment Vue
+- Notification Vue
+- Sass
+
 ## Is the project finished?
 
 No, it isn't. 
